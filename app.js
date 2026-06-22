@@ -4,7 +4,6 @@ const { GoogleGenAI } = require("@google/genai");
 // Modelo Gemini a ser utilizado
 const GEMINI_MODEL = "gemini-3.5-flash";
 
-
 // Valida e monta o prompt antes de enviar
 function buildPrompt(prompt) {
   if (!prompt || prompt.trim() === "") {
@@ -21,7 +20,6 @@ function extractTextFromResponse(response) {
   }
   return response.text;
 }
-
 
 // Envia o prompt para a API do Gemini e retorna a resposta
 async function sendPromptToGemini(prompt, apiKey) {
@@ -40,7 +38,6 @@ async function sendPromptToGemini(prompt, apiKey) {
   // Extrai e retorna o texto da resposta
   return extractTextFromResponse(response);
 }
-
 
 // Exporta as funções para uso em outros arquivos (testes, etc.)
 module.exports = {
