@@ -1,0 +1,29 @@
+# Nome do workflow de integração contínua
+name: Integração Contínua - App Gemini
+
+# Gatilho: executa automaticamente a cada push
+on: [push]
+
+jobs:
+  executar-testes-em-nuvem:
+    # Usa uma máquina virtual Linux Ubuntu na nuvem
+    runs-on: ubuntu-latest
+
+    steps:
+      # Passo 1: Baixa o código do repositório
+      - name: Passo 1 - Baixar o código do repositório
+        uses: actions/checkout@v3
+
+      # Passo 2: Configura o Node.js na máquina virtual
+      - name: Passo 2 - Configurar o Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # Passo 3: Instala as dependências do projeto
+      - name: Passo 3 - Instalar as dependências
+        run: npm install
+
+      # Passo 4: Executa os testes unitários
+      - name: Passo 4 - Executar os testes unitários
+        run: npm test
