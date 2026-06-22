@@ -1,0 +1,24 @@
+{
+  "name": "desenvolvimento-software",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jef-sorridente/desenvolvimento-software.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jef-sorridente/desenvolvimento-software/issues"
+  },
+  "homepage": "https://github.com/jef-sorridente/desenvolvimento-software#readme",
+  "description": "",
+  "dependencies": {
+    "@google/genai": "^2.9.0",
+    "dotenv": "^17.4.2"
+  }
+}
